@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>My Web App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="edit-div" id="edit-div">
+            <form onsubmit="event.preventDefault()">
+                <h1>Edit Item</h1>
+                <label for="productType">Type</label>
+                <input type="text" value="" name="productTypeEdit" id="productTypeEdit" placeholder="Apple, Bannana, Carrots..." required />
+                <br />
+                <br />
+                <label for="productStock">Stock</label>
+                <input type="number" value="" name="productStockEdit" id="productStockEdit" placeholder="0, 50, 100..." required />
+                <br />
+                <br />
+                <label for="productPrice">Price</label>
+                <input type="number" value="" name="productPriceValueEdit" id="productPriceValueEdit" step="0.01" placeholder="0.99, 1.5, 2.25..." required />
+                <input type="text" value="" name="productPriceUnitEdit" id="productPriceUnitEdit" placeholder="each, per, bundle, stack..." required />
+                <br />
+                <br />
+                <button id="btnSave" onclick="saveItem()">Save</button>
+                <button id="btnCancelEdit" onClick="closeEditItemMenu()">Cancel</button>
+            </form>
+        </div>
+        <h1 class="title">Product Manager</h1>
+        <button id="btnNewItem" onClick="showNewItemMenu()">New Item</button>
+        <br /><br />
+        <div class="new-item" id="new-item">
+            <form onsubmit="event.preventDefault()">
+                <label for="productType">Type</label>
+                <input type="text" value="" name="productType" id="productType" placeholder="Apple, Bannana, Carrots..." required />
+                <br />
+                <br />
+                <label for="productStock">Stock</label>
+                <input type="number" value="" name="productStock" id="productStock" placeholder="0, 50, 100..." required />
+                <br />
+                <br />
+                <label for="productPrice">Price</label>
+                <input type="number" value="" name="productPriceValue" id="productPriceValue" step="0.01" placeholder="0.99, 1.5, 2.25..." required />
+                <input type="text" value="" name="productPriceUnit" id="productPriceUnit" placeholder="each, per, bundle, stack..." required />
+                <br />
+                <br />
+                <button id="btnCreate" onclick="createNewItem()">Create</button>
+                <button id="btnCancel" onClick="closeNewItemMenu()">Cancel</button>
+            </form>
+        </div>
+        <h3>Products:</h3>
+        <hr />
+        <div class="product-list" id="product-list">
+        </div>
+    </div>
+    <script type="text/javascript" src="./js/Chapter2.js"></script>
+    <script type="text/javascript" src="./js/Chapter3.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>
